@@ -1,0 +1,112 @@
+#! /opt/homebrew/Cellar/icarus-verilog/12.0/bin/vvp
+:ivl_version "12.0 (stable)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "/opt/homebrew/Cellar/icarus-verilog/12.0/lib/ivl/system.vpi";
+:vpi_module "/opt/homebrew/Cellar/icarus-verilog/12.0/lib/ivl/vhdl_sys.vpi";
+:vpi_module "/opt/homebrew/Cellar/icarus-verilog/12.0/lib/ivl/vhdl_textio.vpi";
+:vpi_module "/opt/homebrew/Cellar/icarus-verilog/12.0/lib/ivl/v2005_math.vpi";
+:vpi_module "/opt/homebrew/Cellar/icarus-verilog/12.0/lib/ivl/va_math.vpi";
+S_0x13fb041e0 .scope module, "bcdToGc_df" "bcdToGc_df" 2 10;
+ .timescale 0 0;
+    .port_info 0 /INPUT 4 "bcd";
+    .port_info 1 /OUTPUT 4 "gc";
+L_0x13fb05c30 .functor XOR 1, L_0x13fa17130, L_0x13fb05b70, C4<0>, C4<0>;
+L_0x13fb05f70 .functor XOR 1, L_0x13fb05d60, L_0x13fb05e80, C4<0>, C4<0>;
+L_0x13fb06390 .functor XOR 1, L_0x13fb06210, L_0x13fb062f0, C4<0>, C4<0>;
+v0x13fb04520_0 .net *"_ivl_10", 0 0, L_0x13fb05c30;  1 drivers
+v0x13fa15b10_0 .net *"_ivl_15", 0 0, L_0x13fb05d60;  1 drivers
+v0x13fa15bd0_0 .net *"_ivl_17", 0 0, L_0x13fb05e80;  1 drivers
+v0x13fa15c80_0 .net *"_ivl_18", 0 0, L_0x13fb05f70;  1 drivers
+v0x13fa15d10_0 .net *"_ivl_24", 0 0, L_0x13fb06210;  1 drivers
+v0x13fa15e00_0 .net *"_ivl_26", 0 0, L_0x13fb062f0;  1 drivers
+v0x13fa15eb0_0 .net *"_ivl_27", 0 0, L_0x13fb06390;  1 drivers
+v0x13fa15f60_0 .net *"_ivl_3", 0 0, L_0x13fa17050;  1 drivers
+v0x13fa16010_0 .net *"_ivl_7", 0 0, L_0x13fa17130;  1 drivers
+v0x13fa16120_0 .net *"_ivl_9", 0 0, L_0x13fb05b70;  1 drivers
+o0x1300081f0 .functor BUFZ 4, C4<zzzz>; HiZ drive
+v0x13fa161d0_0 .net "bcd", 3 0, o0x1300081f0;  0 drivers
+v0x13fa16280_0 .net "gc", 3 0, L_0x13fb06080;  1 drivers
+L_0x13fa17050 .part o0x1300081f0, 3, 1;
+L_0x13fa17130 .part o0x1300081f0, 3, 1;
+L_0x13fb05b70 .part o0x1300081f0, 2, 1;
+L_0x13fb05d60 .part o0x1300081f0, 2, 1;
+L_0x13fb05e80 .part o0x1300081f0, 1, 1;
+L_0x13fb06080 .concat8 [ 1 1 1 1], L_0x13fb06390, L_0x13fb05f70, L_0x13fb05c30, L_0x13fa17050;
+L_0x13fb06210 .part o0x1300081f0, 1, 1;
+L_0x13fb062f0 .part o0x1300081f0, 0, 1;
+S_0x13fb043a0 .scope module, "testbench" "testbench" 2 19;
+ .timescale 0 0;
+v0x13fa16f10_0 .var "bcd", 3 0;
+v0x13fa16fa0_0 .net "gc", 3 0, L_0x13fb06c00;  1 drivers
+S_0x13fa16360 .scope module, "bg" "bcdToGc_gate" 2 22, 2 1 0, S_0x13fb043a0;
+ .timescale 0 0;
+    .port_info 0 /INPUT 4 "bcd";
+    .port_info 1 /OUTPUT 4 "gc";
+L_0x13fb064e0 .functor BUF 1, L_0x13fb06550, C4<0>, C4<0>, C4<0>;
+L_0x13fb06670 .functor XOR 1, L_0x13fb06720, L_0x13fb06800, C4<0>, C4<0>;
+L_0x13fb06960 .functor XOR 1, L_0x13fb06a10, L_0x13fb06af0, C4<0>, C4<0>;
+L_0x13fb06d90 .functor XOR 1, L_0x13fb06e40, L_0x13fb06f60, C4<0>, C4<0>;
+v0x13fa16570_0 .net *"_ivl_0", 0 0, L_0x13fb064e0;  1 drivers
+v0x13fa16630_0 .net *"_ivl_10", 0 0, L_0x13fb06960;  1 drivers
+v0x13fa166d0_0 .net *"_ivl_13", 0 0, L_0x13fb06a10;  1 drivers
+v0x13fa16760_0 .net *"_ivl_15", 0 0, L_0x13fb06af0;  1 drivers
+v0x13fa16810_0 .net *"_ivl_16", 0 0, L_0x13fb06d90;  1 drivers
+v0x13fa16900_0 .net *"_ivl_20", 0 0, L_0x13fb06e40;  1 drivers
+v0x13fa169b0_0 .net *"_ivl_22", 0 0, L_0x13fb06f60;  1 drivers
+v0x13fa16a60_0 .net *"_ivl_3", 0 0, L_0x13fb06550;  1 drivers
+v0x13fa16b10_0 .net *"_ivl_4", 0 0, L_0x13fb06670;  1 drivers
+v0x13fa16c20_0 .net *"_ivl_7", 0 0, L_0x13fb06720;  1 drivers
+v0x13fa16cd0_0 .net *"_ivl_9", 0 0, L_0x13fb06800;  1 drivers
+v0x13fa16d80_0 .net "bcd", 3 0, v0x13fa16f10_0;  1 drivers
+v0x13fa16e30_0 .net "gc", 3 0, L_0x13fb06c00;  alias, 1 drivers
+L_0x13fb06550 .part v0x13fa16f10_0, 3, 1;
+L_0x13fb06720 .part v0x13fa16f10_0, 3, 1;
+L_0x13fb06800 .part v0x13fa16f10_0, 2, 1;
+L_0x13fb06a10 .part v0x13fa16f10_0, 2, 1;
+L_0x13fb06af0 .part v0x13fa16f10_0, 1, 1;
+L_0x13fb06c00 .concat8 [ 1 1 1 1], L_0x13fb06d90, L_0x13fb06960, L_0x13fb06670, L_0x13fb064e0;
+L_0x13fb06e40 .part v0x13fa16f10_0, 1, 1;
+L_0x13fb06f60 .part v0x13fa16f10_0, 0, 1;
+    .scope S_0x13fb043a0;
+T_0 ;
+    %vpi_call 2 24 "$monitor", $time, " bcd=%b, gc=%b", v0x13fa16f10_0, v0x13fa16fa0_0 {0 0 0};
+    %delay 0, 0;
+    %pushi/vec4 0, 0, 4;
+    %store/vec4 v0x13fa16f10_0, 0, 4;
+    %delay 1, 0;
+    %pushi/vec4 1, 0, 4;
+    %store/vec4 v0x13fa16f10_0, 0, 4;
+    %delay 1, 0;
+    %pushi/vec4 2, 0, 4;
+    %store/vec4 v0x13fa16f10_0, 0, 4;
+    %delay 1, 0;
+    %pushi/vec4 3, 0, 4;
+    %store/vec4 v0x13fa16f10_0, 0, 4;
+    %delay 1, 0;
+    %pushi/vec4 4, 0, 4;
+    %store/vec4 v0x13fa16f10_0, 0, 4;
+    %delay 1, 0;
+    %pushi/vec4 5, 0, 4;
+    %store/vec4 v0x13fa16f10_0, 0, 4;
+    %delay 1, 0;
+    %pushi/vec4 6, 0, 4;
+    %store/vec4 v0x13fa16f10_0, 0, 4;
+    %delay 1, 0;
+    %pushi/vec4 7, 0, 4;
+    %store/vec4 v0x13fa16f10_0, 0, 4;
+    %delay 1, 0;
+    %pushi/vec4 8, 0, 4;
+    %store/vec4 v0x13fa16f10_0, 0, 4;
+    %delay 1, 0;
+    %pushi/vec4 9, 0, 4;
+    %store/vec4 v0x13fa16f10_0, 0, 4;
+    %delay 1, 0;
+    %vpi_call 2 35 "$finish" {0 0 0};
+    %end;
+    .thread T_0;
+# The file index is used to find the file name in the following table.
+:file_names 3;
+    "N/A";
+    "<interactive>";
+    "bcdToGc.v";

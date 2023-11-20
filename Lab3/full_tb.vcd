@@ -1,0 +1,107 @@
+$date
+	Fri Nov 10 17:32:00 2023
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module SATestBench $end
+$var wire 4 ! sum [3:0] $end
+$var wire 1 " cout $end
+$var reg 4 # a [3:0] $end
+$var reg 4 $ b [3:0] $end
+$var reg 1 % clock $end
+$scope module sa $end
+$var wire 4 & a [3:0] $end
+$var wire 4 ' b [3:0] $end
+$var wire 1 % clk $end
+$var wire 4 ( z [3:0] $end
+$var wire 4 ) x [3:0] $end
+$var wire 4 * sum [3:0] $end
+$var wire 1 + s $end
+$var wire 1 " cout $end
+$var wire 1 , cin $end
+$scope module g $end
+$var wire 1 % clk $end
+$var wire 4 - d [3:0] $end
+$var reg 4 . y [3:0] $end
+$upscope $end
+$scope module h $end
+$var wire 1 % clk $end
+$var wire 4 / d [3:0] $end
+$var reg 4 0 y [3:0] $end
+$upscope $end
+$scope module k $end
+$var wire 1 1 a $end
+$var wire 1 2 b $end
+$var wire 1 + s $end
+$var wire 1 " cout $end
+$var wire 1 , cin $end
+$upscope $end
+$scope module m $end
+$var wire 1 % clk $end
+$var wire 1 + s $end
+$var reg 4 3 y [3:0] $end
+$upscope $end
+$scope module q $end
+$var wire 1 % clk $end
+$var wire 1 " d $end
+$var reg 1 , q $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+bx 3
+x2
+x1
+bx 0
+b110 /
+bx .
+b1000 -
+0,
+x+
+bx *
+bx )
+bx (
+b110 '
+b1000 &
+x%
+b110 $
+b1000 #
+x"
+bx !
+$end
+#5
+0%
+#10
+x,
+b0xxx )
+b0xxx .
+b0xxx (
+b0xxx 0
+1%
+#15
+0%
+#20
+b0xx (
+b0xx 0
+b0xx )
+b0xx .
+1%
+#25
+0%
+#30
+b0x )
+b0x .
+b0x (
+b0x 0
+1%
+#35
+0%
